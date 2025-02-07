@@ -1,0 +1,19 @@
+models:
+  - model: /home/openbabylon/github/axolotl/ckpts/sft-ua-wiki-mcq-exp6/epoch3/merged 
+    # parameters:
+      # density: [1, 0.7, 0.1] # density gradient
+      # weight: 1.0
+  - model: /home/openbabylon/github/axolotl/ckpts/sft-ua-wiki-mcq-exp6/epoch3/merged
+    # parameters:
+      # density: 0.5
+      # weight: [0, 0.3, 0.7, 1] # weight gradient
+  - model: /home/openbabylon/github/axolotl/ckpts/sft-ua-wiki-mcq-exp6/epoch3/merged
+    # parameters:
+      # density: 0.5
+      # weight: [0, 0.3, 0.7, 1] # weight gradient
+merge_method: ties
+base_model: meta-llama/Llama-3.1-8B-Instruct
+parameters:
+  normalize: true
+  int8_mask: true
+dtype: float16

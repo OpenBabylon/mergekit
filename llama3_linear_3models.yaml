@@ -1,0 +1,12 @@
+models:
+  - model: meta-llama/Llama-3.1-8B-Instruct
+    parameters:
+      weight: 1.0
+  - model: /home/openbabylon/github/axolotl/ckpts/sft-ua-wiki-mcq-exp7/epoch2/merged
+    parameters:
+      weight: 1.0
+  - model: /home/openbabylon/github/axolotl/ckpts/sft-ua-wiki-mcq-exp3/epoch2/merged
+    parameters:
+      weight: 1.0
+merge_method: linear
+dtype: float16
